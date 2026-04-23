@@ -19,9 +19,3 @@ spec:
   resources:
     requests:
       storage: 2G
-  selector:
-    matchLabels:
-      part-of: k8s-anotherclass
-      component: backend-server
-      name: api-tester
-      instance: api-tester-2121-files
