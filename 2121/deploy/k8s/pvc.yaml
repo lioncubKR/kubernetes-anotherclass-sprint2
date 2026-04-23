@@ -11,11 +11,14 @@ metadata:
     version: 1.0.0
     managed-by: kubectl
 spec:
+  # [수정 1] 스토리지 클래스 지정 (nfs-provisioner와 연결)
+  storageClassName: nfs-client
+  # [수정 2] 여러 노드(워커 1, 2)에서 동시에 접근 가능하도록 변경
+  accessModes:
+    - ReadWriteMany
   resources:
     requests:
       storage: 2G
-  accessModes:
-    - ReadWriteOnce
   selector:
     matchLabels:
       part-of: k8s-anotherclass
