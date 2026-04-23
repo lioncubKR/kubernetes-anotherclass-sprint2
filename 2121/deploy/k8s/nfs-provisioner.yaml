@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nfs-client-provisioner
-  namespace: default  # 일단 찾기 쉽게 default에 깔아봅시다
+  namespace: anotherclass-212  # 일단 찾기 쉽게 default에 깔아봅시다
 spec:
   replicas: 1
   strategy: { type: Recreate }
